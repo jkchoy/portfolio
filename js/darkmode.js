@@ -1,18 +1,19 @@
-var checkbox = document.querySelector('input[name=theme]');
+let darkmode = localStorage.getItem('darkmode')
+const themeSwitch = document.getElementById('theme-switch')
 
-checkbox.addEventListener('change', function () {
-  if (this.checked) {
-    trans()
-    document.documentElement.setAttribute('data-theme', 'dark')
-  } else {
-    trans()
-    document.documentElement.setAttribute('data-theme', 'light')
-  }
-})
-
-let trans = () => {
-  document.documentElement.classList.add('transition');
-  window.setTimeout(() => {
-    document.documentElement.classList.remove('transition')
-  }, 1000)
+const enableDarkmode = () => {
+  document.body.classList.add('darkmode')
+  localStorage.setItem('darkmode', 'active')
 }
+
+const disableDarkmode = () => {
+  document.body.classList.remove('darkmode')
+  localStorage.setItem('darkmode', null)
+}
+
+if (darkmode === "active") enableDarkmode()
+
+themeSwitch.addEventListener("click", () => {
+  darkmode = localStorage.getItem('darkmode')
+  darkmode !== "active" ? enableDarkmode() : disableDarkmode()
+})
