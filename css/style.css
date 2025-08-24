@@ -232,8 +232,8 @@ button,
 a.button,
 form input[type=submit] {
   display: inline-block;
-  background-color: #030B5F;
-  border: 2px solid #030B5F;
+  background-color: #ab5e82;
+  border: none;
   color: #fff;
   padding: 0.75em 1em;
   border-radius: 0.32em;
@@ -255,10 +255,14 @@ a.button.alt {
 button:hover,
 a.button:hover,
 form input[type=submit]:hover {
-  background-color: var(--color-links-darker);
-  color: #fff;
-  border-color: var(--color-links-darker);
+  background-color: var(--color-links);
+  color: var(--color-links-darker);
+  border: 1px solid var(--color-links-darker);
   text-decoration: none;
+}
+
+button.theme-switch:hover {
+  border: none;
 }
 
 /* LAYOUT */
@@ -422,12 +426,12 @@ body {
 }
 
 .site-header a {
-  color: #030B5F;
+  color: #ab5e82;
   text-decoration: none;
 }
 
 .site-header a:hover {
-  color: #ab5e82;
+  color: #bebec1;
 }
 
 .site-header a.button {
@@ -1181,7 +1185,7 @@ p.option {
   font-size: 12px;
   line-height: 17px;
   padding: 20px 0px 5px 0px;
-  color: #030B5F;
+  color: #ab5e82;
   font-weight: normal;
   text-transform: uppercase;
   letter-spacing: 0.250em;
@@ -1338,14 +1342,14 @@ p.option {
 
 /* DARK MODE */
 
-:root {
+/* :root {
   --base-color: white;
   --base-variant: #fff;
   --text-color: #111528;
   --secondary-text: #232738;
   --primary-color: #3a435d;
-  --accent-color: #0071ff;
-}
+  --accent-color: #ab5e82;
+} */
 
 .darkmode {
   --base-color: #070b1d;
@@ -1368,7 +1372,9 @@ section {
   padding: 70px min(50px, 7%);
 }
 
-section {
+section,
+.site-header,
+.footer {
   background-color: var(--base-variant);
 }
 
@@ -1388,6 +1394,7 @@ button {
   text-transform: uppercase;
   font-weight: 500;
   cursor: pointer;
+  border-radius: 15px;
 }
 
 .cta-button {
