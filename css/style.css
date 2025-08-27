@@ -216,6 +216,11 @@ img {
   height: auto;
 }
 
+
+.row img {
+  display: block;
+}
+
 /* #VIDEO */
 video {
   max-width: 100%;
@@ -1116,10 +1121,11 @@ form input[type=reset]:hover {
 
 /* PORTFOLIO SECTION */
 
-.kehindewiley,
-.ffg,
-.grid {
+.kehindewiley img,
+.ffg img,
+.grid img {
   border: solid 1px #ccc;
+  display: inline-block;
 }
 
 
@@ -1208,6 +1214,7 @@ p.option {
   transition: .2s;
   -webkit-transition: .2s;
   -moz-transition: .2s;
+  text-decoration: none;
 }
 
 .social ul li a {
