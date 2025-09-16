@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock Paper Scissors - TBBT</title>
+
+  <!-- CSS STYLE -->
+  <link rel="stylesheet" href="css/style.css" rel="stylesheet" type="text/css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Roboto+Flex:opsz,slnt,wght@8..144,-10..0,100..1000&display=swap"
+    rel="stylesheet">
+</head>
+
+
+<body>
+
+  <header class="site-header toggle-nav">
+    <div class="site-id">
+      <a href="index.html"><img src="../portfolio/portfolio-images/rosehexlogo-jac3.png" alt="image of a hexagon logo"
+          width="200" height="250"></a>
+      <h1 class="hidden"><a href="../portfolio/index.html">Jackie Choy</a></h1>
+    </div>
+
+    <nav class="site-navigation">
+      <button class="menu-button navicon">Menu</button>
+      <ul class="nav">
+
+        <!-- <li><a href="index.html">Home</a></li> -->
+        <li><a href="index.html#work">My Work</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li>
+          <button class="button theme-switch" id="theme-switch">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px">
+              <path
+                d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px">
+              <path
+                d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z" />
+            </svg>
+          </button>
+        </li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <main class="=site-main">
+
+    <section class="section-title">
+
+      <div>
+        <h1>Rock Paper Scissors</h1>
+        <h2 class="subtitle"><em>Big Bang Theory</em> Edition </h2>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+
+        <div class="rockbody">
+
+
+
+          <!-- rock -->
+          <button class="move-button js-rock-button"><img src="images/rock-emoji.png" alt="rock emoji"
+              class="move-icon">
+          </button>
+
+
+
+          <!-- paper -->
+          <button class="move-button js-paper-button"><img src="images/paper-emoji.png" alt="paper emoji"
+              class="move-icon"></button>
+
+
+
+          <!-- scissors -->
+          <button class="move-button js-scissors-button"><img src="images/scissors-emoji.png" alt="scissors emoji"
+              class="move-icon"></button>
+
+
+          <!-- lizard -->
+          <button class="move-button js-lizard-button"><img src="images/lizard-emoji.png" alt="lizard emoji"
+              class="move-icon"></button>
+
+
+          <!-- spock -->
+          <button class="move-button js-spock-button"><img src="images/spock-emoji.png" alt="spock emoji"
+              class="move-icon"></button>
+          <br><br>
+          <h3>Gestures and Rules</h3>
+          <br>
+          <div class="row">
+            <div class="one-half column">
+              <p class="spockrules">Scissors cuts Paper <br>
+                Paper covers Rock <br>
+                Rock crushes Lizard <br>
+                Lizard poisons Spock <br>
+                Spock smashes Scissors <br>
+                Scissors cuts Paper
+              </p>
+            </div>
+            <div class="one-half column">
+              <p class="spockrules">
+                Scissors decapitates Lizard <br>
+                Lizard eats Paper <br>
+                Paper disproves Spock <br>
+                Spock vaporizes Rock <br>
+                and as it always has<br>
+                Rock crushes Scissors
+              </p>
+            </div>
+          </div>
+
+          <h3 class="js-result result subtitle"></h3>
+          <h3 class="js-moves"></h3>
+          <h3 class="js-score score subtitle"></h3>
+
+
+
+          <!-- reset score -->
+          <button onclick="
+          score.wins = 0;
+          score.losses = 0;
+          score.ties = 0;
+          localStorage.removeItem('score');
+          updateScoreElement();
+          " class="reset-score-button">reset score</button>
+
+
+          <button class="auto-play-button" onclick="autoPlay();
+            ">auto play</button>
+
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer">
+      <div class="container">
+        <div class="contain">
+          <div class="col">
+            <ul>
+              <a href="index.html"><img src="../portfolio/portfolio-images/rosehexlogo-jac-3.1.png"
+                  alt="image of a hexagon logo" width="90" height="140"></a>
+              <li><a href="../portfolio/about.html">About Me</a></li>
+              <!-- <a href="mailto:jackilyn@hawaii.edu" class="button">Let's Connect</a> -->
+
+            </ul>
+          </div>
+          <div class="col">
+            <h1><strong>Typography</strong></h1>
+            <ul>
+              <li><a href="../portfolio/booktrilogy.html">The Tapeworm Is In</a></li>
+              <li><a href="../portfolio/typography.html">Kehinde Wiley</a></li>
+              <li><a href="../portfolio/gridlayout.html">Tiamisu</a></li>
+              <li><a href="../portfolio/visualcommunication.html">Schitt's Creek</a></li>
+
+            </ul>
+          </div>
+
+          <div class="col">
+            <h1><strong>Idenity</strong></h1>
+            <ul>
+              <li><a href="../portfolio/logoredesign.html">Fancy Fresh Food Shop</a></li>
+              <li><a href="../portfolio/salzburg.html">Salzburg</a></li>
+
+            </ul>
+          </div>
+          <div class="col">
+            <h1><strong>Motion</strong></h1>
+            <ul>
+              <li><a href="../portfolio/logoanimation.html">Island Snow</a></li>
+              <li><a href="../portfolio/plutoadventure.html">Pluto's Adventure</a></li>
+
+
+            </ul>
+          </div>
+
+          <div class="col">
+            <h1><strong>UX/UI</strong></h1>
+            <ul>
+
+              <li><a href="../portfolio/ffg.html">Fit For A Goddess</a></li>
+              <li><a href="..//portfolio/arttentstudio.html">Art Tent Studio</a></li>
+
+            </ul>
+          </div>
+
+
+          <div class="col social">
+            <h1><strong>Other</strong></h1>
+            <ul>
+              <li><a href="..//portfolio/12-rock-paper-scissors-bbt.html">Rock Paper Scissors—TBBT</a></li>
+              <li><a href="..//portfolio/12-rock-paper-scissors-friends.html">Rock Paper Scissors—Friennds</a></li>
+
+              <li><a href="https://github.com/jkchoy"><img src="../portfolio/portfolio-images/github-mark.svg"
+                    alt="Github" width="20" height="20"> <span class="hide-visually"></a>
+              </li>
+
+            </ul>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- END CONTAINER -->
+  </footer>
+
+  <!-- JAVASCRIPT -->
+  <script src="js/12-rock-paper-scissors-bbt.js"></script>
+  <script src="../portfolio/js/script.js"></script>
+  <script src="../portfolio/js/darkmode.js"></script>
+
+
+
+</body>
+
+</html>
