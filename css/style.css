@@ -1953,27 +1953,27 @@ button {
 @keyframes gallery {
   0% {
     /* opacity: 1; */
-    content: url('../images-2026/jackie-code.jpg');
+    content: url('../portfolio-images/jackie-code-color.jpg');
   }
 
   25% {
     /* opacity: 0; */
-    content: url('../images-2026/Jackie-treatment-code2.jpg');
+    content: url('../portfolio-images/Jackie-treatment-code-color.jpg');
   }
 
   50% {
     /* opacity: 0; */
-    content: url('../images-2026/jackie-cupping3.jpg');
+    content: url('../portfolio-images/jackie-cupping3-color.jpg');
   }
 
   75% {
     /* opacity: 0; */
-    content: url('../images-2026/jackie-folding3.jpg');
+    content: url('../portfolio-images/jackie-folding-color.jpg');
   }
 
   100% {
     /* opacity: 1; */
-    content: url('../images-2026/jackie-tracing-gray.jpg');
+    content: url('../portfolio-images/jackie-tracing.jpg');
   }
 
 }
