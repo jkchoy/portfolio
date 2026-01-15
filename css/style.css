@@ -1650,14 +1650,14 @@ button {
 
 .hero-portfolio {
   display: grid;
-  grid-template-columns: 1em repeat(12, 1fr) 1em;
-  grid-template-rows: repeat(7, 100px);
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(10, 100px);
 }
 
 .hero-main-content {
   /* padding: var(--unit-xl); */
-  grid-column: 2 / 7;
-  grid-row: 3 / 5;
+  grid-column: 1 / 7;
+  grid-row: 1 / 5;
   z-index: 60;
   /* border: 1px solid blue; */
 }
@@ -1680,8 +1680,9 @@ button {
 }
 
 .hero-text {
-  grid-column: 11 / 14;
-  grid-row: 6 / 9;
+  grid-column: 9 / 15;
+  grid-row: 8 / 10;
+  padding: 1em;
   z-index: 90;
   /* border: 1px solid red; */
 
@@ -1822,7 +1823,7 @@ button {
   .hero-portfolio {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(12, 50px);
+    grid-template-rows: repeat(15, 50px);
   }
 
   .hero-main-content {
@@ -1852,12 +1853,6 @@ button {
     font-size: 1.3em;
   }
 
-  .hero-text {
-    grid-column: 2 / 12;
-    grid-row: 11 / 13;
-    z-index: 90;
-  }
-
   .hero-eyebrow {
     font-size: .875rem;
     font-weight: bold;
@@ -1871,6 +1866,7 @@ button {
   .gallery-container {
     grid-column: 2 / 13;
     grid-row: 1 / 7;
+    z-index: 10;
     /* border: 1px solid red; */
   }
 
@@ -1887,7 +1883,23 @@ button {
     z-index: 60;
   }
 
+
+  .hero-text.accent-section {
+    grid-column: 2 / 12;
+    grid-row: 11 / 16;
+    color: rgb(167, 171, 178);
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    letter-spacing: 3px;
+    line-height: 22px;
+    font-weight: 200;
+    mix-blend-mode: luminosity;
+  }
+
 }
+
+
 
 .button.contact {
   background-color: var(--color-teal);
@@ -1939,10 +1951,13 @@ button {
 .gallery-container {
   max-width: 100%;
   height: auto;
-  grid-column: 5 / 11;
-  grid-row: 2 / 10;
-  z-index: 50;
-  clip-path: circle(50%);
+  grid-column: 4 / 11;
+  grid-row: 2 / 9;
+  border-radius: 50px;
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  float: left;
+  /* clip-path: ellipse(40% 50%); */
+  /* shape-outside: circle(50%); */
   animation-name: gallery;
   animation-duration: 10s;
   animation-iteration-count: infinite;
@@ -1981,4 +1996,16 @@ button {
     content: url('../portfolio-images/jackie-tracing.jpg');
   }
 
+}
+
+
+.accent-section {
+  color: rgb(167, 171, 178);
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 200;
+  mix-blend-mode: luminosity;
 }
