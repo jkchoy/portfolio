@@ -2026,7 +2026,7 @@ button {
 /* MOVE SWIPER ARROWS OUTSIDE OF SWIPER */
 .swiper-button-prev,
 .swiper-button-next {
-  background-color: var(--color-white);
+  background-color: transparent;
   padding: var(--unit-xs);
   border-radius: 100%;
 }
@@ -2039,7 +2039,7 @@ button {
 /* TEMP SOLUTION COVERS THE CONTENT WITH A WHITE BG, FIX IN THE FUTURE IF THERE IS TIME */
 .swiper-button-prev {
   translate: -4px -50%;
-  background-color: white;
+  background-color: transparent;
   height: 100%;
   border-radius: 0;
   top: 0;
@@ -2048,7 +2048,7 @@ button {
 
 .swiper-button-next {
   translate: 4px -50%;
-  background-color: white;
+  background-color: transparent;
   height: 100%;
   border-radius: 0;
   top: 0;
