@@ -10,6 +10,9 @@
   <!-- VIEWPORT FOR MOBILE -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <!-- SWIPER CSS - put at the top inside of your head -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
   <!-- MAIN CSS FILE -->
   <link href="css/style.css" rel="stylesheet" type="text/css">
 </head>
@@ -49,7 +52,7 @@
 
     <section class="section-title">
       <div class="container">
-        <img src="../portfolio/portfolio-images/jkc-hero-img.jpg" alt="JKC Wellness" width="1500" height="1500">
+        <img src="../portfolio/portfolio-images/jkc-laptop2.jpg" alt="JKC Wellness" width="1500" height="1500">
 
 
 
@@ -143,33 +146,75 @@
       <div class="container">
 
         <h2>Branding & Assets</h2>
-
-      </div>
-      <br>
-      <div class="container">
+        <br>
 
         <div class="row">
           <div class="two-thirds">
-            <img src="portfolio-images/app-brand-assets2.jpg" alt="app brand and Assets" width="700" height="700">
+
+            <!-- Slider main container -->
+            <div class="swiper">
+
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+
+                <!-- Slides -->
+                <div class="swiper-slide">
+
+                  <div class="card">
+
+                    <div class="color-info">
+                      <img src="portfolio-images/app-brand-assets2.jpg" alt="app brand and Assets">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="card">
+
+                    <div class="color-info">
+                      <img src="portfolio-images/jkc-brand-colors.jpg" alt="JKC Colors">
+                    </div>
+                  </div>
+                </div>
+
+
+
+              </div>
+              <!-- If we need pagination -->
+              <div class="swiper-pagination"></div>
+
+              <!-- If we need navigation buttons -->
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+
+            </div>
+            <p>In an unconventional approach, the owner wanted a broader range of colors than the typical 3–6-color
+              palette. She preferred additional color options—not bright primary hues, but more nuanced tones that
+              would complement the warm feel of her room. Along with expanding the selection, she asked for muted
+              shades, which, to her pleasant surprise, worked beautifully as subtle accents alongside the simple line
+              illustrations and icons.</p>
+
 
           </div>
 
-
-
           <div class="one-third column">
-            <div class="ffg">
+            <div class="ffg line-art">
 
               <p>JKC Wellness's main color has always been a deep blue with hints of white and light gray, I
                 wanted to give an option with a pop of color—although not a part of her traditional wheel house, the
-                owner does have subtle hints of gold & copper in her treatment room. But I also wanted to stay true to
-                her well established colors.</p>
+                owner does have subtle hints of gold & copper in her treatment room.</p>
+
 
               <p>For the typeface, JKC Wellness wanted a sense of elegance and classical proportion. Orpheus Pro
                 delivered a refined yet understated sophistication, creating contrast that reinforces visual hierarchy
                 and interest. For the primary typeface, she sought a design that was clean, versatile, and
-                welcoming—qualities that perfectly align with the brand's personality, which Lato successfully fulfilled
+                welcoming—qualities that perfectly align with the brand's personality, which Lato successfully
+                fulfilled
               </p>
-              </p>
+              <br>
+              <img src="portfolio-images/cupping-line-illustration5.png" alt="line illustrations of cupping massage"
+                width="500" height="400">
+
             </div>
           </div>
         </div>
@@ -311,10 +356,10 @@
           <div class="one-half column">
 
             <h2>Front-End Web Development</h2>
-            <img src="../portfolio/portfolio-images/ffglaptoppink2.jpg"
-              alt="image of potential colors and typeface for a website" width="1000" height="1500">
+            <img src="../portfolio/portfolio-images/jackie-coding-jkc3.jpg" alt="Jackie coding JKC Wellness' website"
+              width="550" height="350">
 
-            <p><a class="button" href="https://jkchoy.github.io/studentsite/art229/ffg-site1-v4/index.html">The Coded
+            <p><a class="button" href="https://jkchoy.github.io/jkcwellness/">The Coded
                 Site</a>
             </p>
 
@@ -324,10 +369,9 @@
 
             <div class="container">
               <h2>UI Design</h2>
-              <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="450" height="320"
-                src="https://embed.figma.com/proto/a8HwzjAg3IrVcdmI1eNEEO/ART-229---design-1--pink-?page-id=0%3A1&node-id=1-2&viewport=350%2C25%2C0.07&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1%3A2&embed-host=share"
+              <iframe style="border: 1px solid rgba(17, 225, 225, 0.1);" width="450" height="320"
+                src="https://embed.figma.com/proto/sZx24KppxZ77EF8LWwXWbM/JKC-Website?page-id=674%3A62&node-id=674-238&p=f&viewport=1308%2C-832%2C0.22&scaling=scale-down&content-scaling=fixed&starting-point-node-id=674%3A238&embed-host=share"
                 allowfullscreen></iframe>
-
 
             </div>
 
@@ -417,6 +461,31 @@
 
     <!-- END CONTAINER -->
   </footer>
+
+  <!-- SWIPER JS - put at the bottom inside of your body -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+  <script>
+    const swiper = new Swiper('.swiper', {
+      // Optional parameters
+      loop: true,
+      slidesPerView: 1,
+      spaceBetween: 10,
+      centeredSlides: false,
+
+      // If we need pagination
+      pagination: {
+        el: '.swiper-pagination',
+      },
+
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+
+    });
+  </script>
 
   <!-- MAIN JS -->
   <script src="js/slider-image.js"></script>

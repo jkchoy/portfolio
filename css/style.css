@@ -1130,7 +1130,9 @@ form input[type=reset]:hover {
   display: inline-block;
 }
 
-
+.ffg.line-art img {
+  border: none;
+}
 
 
 
@@ -2009,4 +2011,65 @@ button {
   letter-spacing: 1px;
   font-weight: 200;
   mix-blend-mode: luminosity;
+}
+
+/* SWIPER CSS STYLING */
+
+.swiper {
+  padding-block-end: 2rem;
+  text-align: center;
+}
+
+
+.swiper-wrapper {}
+
+/* MOVE SWIPER ARROWS OUTSIDE OF SWIPER */
+.swiper-button-prev,
+.swiper-button-next {
+  background-color: var(--color-white);
+  padding: var(--unit-xs);
+  border-radius: 100%;
+}
+
+/* TEMP WAY TO MOVE ARROWS OUTSIDE OF SWIPER */
+.swiper {
+  padding-inline: 50px;
+}
+
+/* TEMP SOLUTION COVERS THE CONTENT WITH A WHITE BG, FIX IN THE FUTURE IF THERE IS TIME */
+.swiper-button-prev {
+  translate: -4px -50%;
+  background-color: white;
+  height: 100%;
+  border-radius: 0;
+  top: 0;
+  left: 0;
+}
+
+.swiper-button-next {
+  translate: 4px -50%;
+  background-color: white;
+  height: 100%;
+  border-radius: 0;
+  top: 0;
+  right: 0;
+}
+
+/* REMOVE COLOR CARD WIDTHS AND HEIGHTS WHEN INSIDE A SWIPER SLIDE */
+.swiper-slide .card {
+  display: block;
+}
+
+.swiper-slide .color-swatch {
+  width: 100%;
+  min-height: 150px;
+}
+
+
+/* CARDS */
+.card {
+  border: var(--border-thickness) solid var(--color-border);
+  display: inline-block;
+  padding: var(--unit-s);
+  border-radius: var(--border-radius);
 }
