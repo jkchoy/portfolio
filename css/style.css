@@ -246,7 +246,7 @@ form input[type=submit] {
   border-radius: 0.32em;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
-  /* border: none; */
+  border: 1px solid #ab5e82;
   cursor: pointer;
   line-height: 1;
   text-decoration: none;
@@ -1609,7 +1609,7 @@ button {
 
 .newPic {
   background: #ab5e82;
-  /* border: 2px solid var(--color-blue-GM); */
+  border: 1px solid #ab5e82;
   border-radius: 4px;
   padding: 6px 18px;
   margin: 5px;
